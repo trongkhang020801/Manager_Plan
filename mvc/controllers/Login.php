@@ -20,7 +20,7 @@ class login extends Controller {
 
             if($this->UserModel->checkUser($idUser,$Pass)){
                 if(isset($_SESSION['product'])){
-                    header('Location: http://localhost/ShopDH/checkout');
+                    header('Location: http://localhost:81/Manager_Plan/checkout');
                 }
                 else{
                     header('Location: http://localhost/ShopDH/');

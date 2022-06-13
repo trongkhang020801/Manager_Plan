@@ -11,10 +11,10 @@
                         <nav>
                             <ul id="top_nav">
                                 <li>
-                                    <a href="index.html"><img src="images/img1.gif" alt=""></a>
+                                    <a href="index.html"><img src="public/images/img1.gif" alt=""></a>
                                 </li>
                                 <li>
-                                    <a href="index-4.html"><img src="images/img2.gif" alt=""></a>
+                                    <a href="index-4.html"><img src="public/images/img2.gif" alt=""></a>
                                 </li>
 
                             </ul>
@@ -35,9 +35,9 @@
     <div class="main">
         <div id="banner">
             <div class="text1">
-                COMFORT<span>Guaranteed</span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                Danang<span>Airport</span>
+                <p>Happiness on every flight</p>
             </div>
-            <a href="#" class="button_top">Order Tickets Online</a>
+           
         </div>
     </div>

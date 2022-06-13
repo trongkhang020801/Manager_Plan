@@ -125,7 +125,8 @@ h2 {
     line-height: 38px;
     padding: 30px 0 16px 0;
     font-weight: 400;
-    letter-spacing: -1px
+    letter-spacing: -1px;
+    margin-left: 10px;
 }
 
 p {
@@ -214,7 +215,7 @@ header .right {
 }
 
 #banner {
-    background: url(../images/bg_img2.jpg) 0 0 no-repeat;
+    /* background: url(../images/bg_img2.jpg) 0 0 no-repeat; */
     height: 211px;
     padding: 30px 0 0 60px
 }
@@ -263,6 +264,11 @@ header .right {
     background: url(../images/button_top_active.jpg) 0 0 no-repeat
 }
 
+.table {
+    min-width: 620px;
+    max-width: 620px;
+}
+
 
 /* content */
 
@@ -271,16 +277,22 @@ header .right {
     overflow: hidden
 }
 
+.form-contro {
+    width: 120px;
+    height: 60px;
+}
+
 .pad_1 {
-    padding: 0 50px 35px 60px
+    padding: 0 15px 20px 15px
 }
 
 .pad_left1 {
-    padding-left: 50px
+    padding-left: 35px
 }
 
 .pad_bot1 {
-    padding-bottom: 20px
+    padding-left: 10px;
+    padding-bottom: 10px
 }
 
 .pad_bot2 {
@@ -292,7 +304,7 @@ header .right {
 }
 
 .marg_right1 {
-    margin-right: 25px
+    margin-right: 20px
 }
 
 .button1,
@@ -436,7 +448,7 @@ footer a {
 }
 
 #form_1 .radio {
-    width: 92px;
+    width: 110px;
     float: left
 }
 

@@ -6,7 +6,7 @@ class DB{
     protected $servername = "localhost";
     protected $username = "root";
     protected $password = "";
-    protected $dbname = "dongho";
+    protected $dbname = "maybay";
 
     function __construct() {
         $this->con = mysqli_connect($this->servername, $this->username, $this->password);
