@@ -1,47 +1,63 @@
+<?php
+$nameAirline = json_decode($data['nameAirline']);
+?>
 <div class="main">
         <!-- content -->
         <section id="content">
             <article class="col1">
                 <div class="pad_1">
-                    <h2>Your Flight Planner</h2>
-                    <form id="form_1" action="" method="post">
+                    <h2>Look up flight information</h2>
+                    <form id="form_1" action="home/search" method="post">
                         <div class="wrapper pad_bot1">
-                            <div class="radio marg_right1">
-                                <input type="radio" name="name1">Round Trip<br>
-                                <input type="radio" name="name1">One Way
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                            Flight To
+                            </label>
                             </div>
-                            <div class="radio">
-                                <input type="radio" name="name1">Empty-Leg<br>
-                                <input type="radio" name="name1">Multi-Leg
-                            </div>
-                        </div>
-                        <div class="wrapper">
-                            Leaving From:
-                            <div class="bg"><input type="text" class="input input1" value="Enter City or Airport Code" onblur="if(this.value=='') this.value='Enter City or Airport Code'" onFocus="if(this.value =='Enter City or Airport Code' ) this.value=''"></div>
-                        </div>
-                        <div class="wrapper">
-                            Going To:
-                            <div class="bg"><input type="text" class="input input1" value="Enter City or Airport Code" onblur="if(this.value=='') this.value='Enter City or Airport Code'" onFocus="if(this.value =='Enter City or Airport Code' ) this.value=''"></div>
-                        </div>
-                        <div class="wrapper">
-                            Departure Date and Time:
-                            <div class="wrapper">
-                                <div class="bg left"><input type="text" class="input input2" value="mm/dd/yyyy " onblur="if(this.value=='') this.value='mm/dd/yyyy '" onFocus="if(this.value =='mm/dd/yyyy ' ) this.value=''"></div>
-                                <div class="bg right"><input type="text" class="input input2" value="12:00am" onblur="if(this.value=='') this.value='12:00am'" onFocus="if(this.value =='12:00am' ) this.value=''"></div>
+                            <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                            <label class="form-check-label" for="flexRadioDefault2">
+                            Flight Away
+                            </label>
                             </div>
                         </div>
-                        <div class="wrapper">
-                            Return Date and Time:
-                            <div class="wrapper">
-                                <div class="bg left"><input type="text" class="input input2" value="mm/dd/yyyy " onblur="if(this.value=='') this.value='mm/dd/yyyy '" onFocus="if(this.value =='mm/dd/yyyy ' ) this.value=''"></div>
-                                <div class="bg right"><input type="text" class="input input2" value="12:00am" onblur="if(this.value=='') this.value='12:00am'" onFocus="if(this.value =='12:00am' ) this.value=''"></div>
+                        <div class="mb-3">
+                            <label for="formGroupExampleInput" class="form-label">Destination</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter destination">
+                        </div>
+                        <div class="mb-3">
+                            <label for="formGroupExampleInput2" class="form-label">Departure</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Enter Departure">
+                        </div>
+                        Date
+                            <div class="row">
+                                <div class='col-sm-11'>
+                                    <div class="form-group">
+                                        <div class='input-group date' id='datetimepicker1'>
+                                        <input type='text' class="form-control" />
+                                        <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                        </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script type="text/javascript">
+                                    $(function () {
+                                        $('#datetimepicker1').datetimepicker();
+                                    });
+                                </script>
                             </div>
-                        </div>
-                        <div class="wrapper">
-                            <p>Passenger(s):</p>
-                            <div class="bg left"><input type="text" class="input input2" value="# passengers" onblur="if(this.value=='') this.value='# passengers'" onFocus="if(this.value =='# passengers' ) this.value=''"></div>
-                            <a href="#" class="button2" onClick="document.getElementById('form_1').submit()">go!</a>
-                        </div>
+                            <div class="mb-3">                
+                            Choose an Airline
+                            <select class="form-select" aria-label="Default select example" name="nameair" id="nameair">
+                                <option values="0">All an Airline</option>
+                                <?php foreach($nameAirline as $item) {?>
+                                <option value=<?php echo '"'.$item->idHang.'"'?>><?php echo $item->tenHang?></option>
+                                <?php } ?>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Search</button>
                     </form>
 
                 </div>
