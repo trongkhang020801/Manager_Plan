@@ -32,7 +32,7 @@
                                             <?php if (isset($_SESSION['isAdmin'])) {
                                             ?>
                                                 <li><a href="#">personnel</a></li>
-                                                <li><a href="#">statistical</a></li>
+                                                <li><a href="statistical">statistical</a></li>
                                             <?php } ?>
                                             <li><a href="login/logOut">logout</a></li>
                                     </ul>

@@ -16,7 +16,21 @@
                             <div class="col-md-12"><label class="labels">Tên</label><input type="text" class="form-control"  value="<?php echo $_SESSION['login']['tenNV']?>" name="name"></div>
                         </div>
                         <div class="row mt-3">
-                            <div class="col-md-12"><label class="labels">Ngày sinh</label><input type="text" class="form-control"  value="<?php echo $_SESSION['login']['ngaySinh']?>" name="old"></div>
+                                <div class="col-md-6">
+                                    <label class="labels">Giới tính</label>
+                                    <div>
+                                        <input class="btn-radio" <?php if($_SESSION['login']['gioiTinh']==1) echo "checked";?> type="radio" name="gender" value="1">
+                                        <label for="male"> Nam </label>
+                                        <input class="btn-radio"  type="radio" <?php if($_SESSION['login']['gioiTinh']==0) echo "checked";?>   name="gender" value="0">
+                                        <label for="female"> Nữ</label>
+                                        <input class="btn-radio" type="radio" <?php if($_SESSION['login']['gioiTinh']>1) echo "checked";?>  name="gender" value="2">
+                                        <label for="other"> Khác </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6"><label class="labels">Ngày sinh</label><input type="date" 
+                                 class="form-control" value="<?php echo $_SESSION['login']['ngaySinh']?>" name="old"></div>
+                        </div>
+                        <div class="row mt-3">
                             <div class="col-md-12"><label class="labels">Địa chỉ</label><input type="text" class="form-control"  value="<?php echo $_SESSION['login']['diaChi']?>" name="address"></div>
                             <div class="col-md-12"><label class="labels">Số điện thoại</label><input type="text" class="form-control"  value="<?php echo $_SESSION['login']['SDT']?>" name="sdt"></div>
                             <div class="col-md-12"><label class="labels">Căng cước công dân</label><input type="text" class="form-control"  value="<?php echo $_SESSION['login']['CCCD']?>" name="cccd"></div>

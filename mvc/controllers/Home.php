@@ -1,8 +1,6 @@
 <?php 
 class home extends Controller {
 
-    var $ProductModel;
-    var $HighModel;
     // public function __construct()
     // {
     //     // Call Models

@@ -21,8 +21,9 @@
             $old=$_POST['old'];
             $user=$_POST['user'];
             $pass=$_POST['pass'];
+            $gender=$_POST['gender'];
             $address=$_POST['address'];
-            $data = json_decode($this->AccountModel->changefl($id,$name,$old,$cccd,$sdt,$address,$user,$pass));
+            $data = json_decode($this->AccountModel->changefl($id,$name,$old,$cccd,$sdt,$address,$user,$pass,$gender));
             if($data==true){
                 $_SESSION['profile']='Thay đổi thành công';
                 header('Location: http://localhost/Manager_Plan/account');

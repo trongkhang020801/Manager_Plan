@@ -496,3 +496,16 @@ footer a {
     font: 14px Arial, Helvetica, sans-serif;
     padding: 2px 15px
 }
+.stati{
+    margin: 30px 0px;
+    float: left;
+}
+.stati p{
+    color: #000;
+    font-size:30px;
+    width: 1000px;
+    margin: 0%;
+}
+.stati tbody:last-child{
+    border-bottom: 2px solid #dee2e6;
+}
