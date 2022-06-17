@@ -4,6 +4,8 @@
 <head>
     <title></title>
     <meta charset="utf-8">
+  ``<meta http-equiv="x-ua-compatible" content="ie=edge">
+    <base href="http://localhost/Manager_Plan/">
     <link rel="stylesheet" href="public/css/reset.css" type="text/css" media="all">
     <link rel="stylesheet" href="public/css/layout.css" type="text/css" media="all">
     <link rel="stylesheet" href="public/css/style.css" type="text/css" media="all">
@@ -20,14 +22,12 @@
 </head>
 
 <body id="page1">
-    <div class="body1">
     <?php
     include('./mvc/views/components/header.php');
     include('./mvc/views/components/BannerLeftSearch.php');
     include('./mvc/views/components/mainHome.php');
     include('./mvc/views/components/footer.php');
     ?>
-    </div>
     <script type="text/javascript">
         Cufon.now();
     </script>

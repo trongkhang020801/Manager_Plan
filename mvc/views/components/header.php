@@ -21,7 +21,7 @@
                         </nav>
                         <nav>
                             <ul id="menu">
-                                <li id="menu_active"><a href="index.html">Home</a></li>
+                                <li><a href="index.html">Home</a></li>
                                 <li><a href="index-1.html">Introduce</a></li>
                                 <li><a href="index-2.html">News</a></li>
                                 <?php if (isset($_SESSION['login'])) { ?>

@@ -2,7 +2,7 @@
         <div class="main">
             <!-- footer -->
             <footer>
-                Website template designed by <a href="http://www.templatemonster.com/" target="_blank" rel="nofollow">www.templatemonster.com</a><br> 3D Models provided by <a href="http://www.templates.com/product/3d-models/" target="_blank" rel="nofollow">www.templates.com</a>
+                Designed by <a href="#" target="_blank" rel="nofollow">group 7</a><br> Link github <a href="https://github.com/trongkhang020801/Manager_Plan" target="_blank" rel="nofollow">https://github.com/trongkhang020801/Manager_Plan.git</a>
             </footer>
             <!-- / footer -->
         </div>
