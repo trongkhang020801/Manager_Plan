@@ -28,6 +28,9 @@ class AccountModel extends DB{
             if ($pass==$row['matKhau']) {
                 $_SESSION['login'] = $row;
                 $rs=true;
+                if ($row['idQuyen'] ==1) {
+                    $_SESSION['isAdmin'] = true;
+                } 
             }
         }
         return $rs;

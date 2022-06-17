@@ -37,6 +37,9 @@ class login extends Controller {
         if(isset($_SESSION['profile'])){
             unset($_SESSION['profile']);
         }
+        if(isset($_SESSION['isAdmin'])){
+            unset($_SESSION['isAdmin']);
+        }
         header('location:http://localhost/Manager_Plan/login');
     }
 }

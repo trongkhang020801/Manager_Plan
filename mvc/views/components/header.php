@@ -21,11 +21,22 @@
                         </nav>
                         <nav>
                             <ul id="menu">
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="index-1.html">Introduce</a></li>
-                                <li><a href="index-2.html">News</a></li>
+                                <li><a href="home">Home</a></li>
+                                <li><a href="#">Introduce</a></li>
+                                <li><a href="#">News</a></li>
                                 <?php if (isset($_SESSION['login'])) { ?>
-                                    <li><a href="account">Hi <?php echo $_SESSION['login']['tenNV'] ?></a></li>
+                                    <li><a href="#">Hi <?php echo $_SESSION['login']['tenNV'] ?></a>
+                                        <ul class="sub-menu">
+                                            <li><a href="account">frofile</a></li>
+                                            <li><a href="#">flight</a></li>
+                                            <?php if (isset($_SESSION['isAdmin'])) {
+                                            ?>
+                                                <li><a href="#">personnel</a></li>
+                                                <li><a href="#">statistical</a></li>
+                                            <?php } ?>
+                                            <li><a href="login/logOut">logout</a></li>
+                                        </ul>
+                                    </li>
                                         <?php } else { ?>
                                             <li><a href="login">Login</a></li>
                                         <?php } ?>
