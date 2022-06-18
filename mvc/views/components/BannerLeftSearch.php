@@ -1,5 +1,4 @@
 <?php
-$nameAirline = json_decode($data['nameAirline']);
 ?>
 <div class="main">
         <!-- content -->

@@ -22,8 +22,8 @@
                         <nav>
                             <ul id="menu">
                                 <li id="menu_active"><a href="index.html">Home</a></li>
-                                <li><a href="index-1.html">Introduce</a></li>
-                                <li><a href="index-2.html">News</a></li>
+                                <li><a href="about">About</a></li>
+                                <li><a href="news">News</a></li>
                                 <li><a href="login">Login</a></li>
                             </ul>
                         </nav>
