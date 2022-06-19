@@ -518,3 +518,11 @@ table.dataTable thead .sorting_desc_disabled:before {
 .img_about {
     height: 200px;
 }
+
+p {
+    color: #1e749a;
+}
+
+button {
+    max-width: 100px;
+}

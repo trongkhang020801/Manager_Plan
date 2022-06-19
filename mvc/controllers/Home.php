@@ -14,16 +14,21 @@ class home extends Controller {
         // Call Views
         $this->view("home", [
             "infflight" =>  $this->Informationflight->getInformationFilght(),
-            "nameAirline" =>  $this->HighModel->getInformationAirline()
+            "nameAirline" =>  $this->HighModel->getInformationAirline(),
+            "nameTo" => $this->HighModel->getInformationAirline_to(),
+            "nameflight" => $this->HighModel->getInformationAirline_fl()
         ]);
     }
     function search() {      
         // Call Views
         $idHang = $_POST['nameair'];
-
+        $Destination = $_POST['namedes'];
+        $FLIGHT= $_POST['namefl'];
         $this->view("home", [
-            "infflight" =>  $this->Informationflight->getInformationFilghtSearch($idHang),
-            "nameAirline" =>  $this->HighModel->getInformationAirline()
+            "infflight" =>  $this->Informationflight->getInformationFilghtSearch($idHang,$Destination,$FLIGHT),
+            "nameAirline" =>  $this->HighModel->getInformationAirline(),
+            "nameTo" => $this->HighModel->getInformationAirline_to(),
+            "nameflight" => $this->HighModel->getInformationAirline_fl()
         ]);
      
     }

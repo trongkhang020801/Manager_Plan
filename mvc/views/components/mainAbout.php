@@ -3,8 +3,8 @@
                 <h2>Da Nang Airport</h2>
                 <div class="wrapper">
                     <figure class="left marg_right1"><img class="img_about" src="./public/images/cert.png" alt=""></figure>
-                    <p>is the <strong>largest airport </strong>in the <strong >Central - Central Highlands </strong>
-                    region and <strong> the third largest in Vietnam<strong>, located in Hai Chau district, 3 km from Da Nang city center, with a total airport area of ​​842 ha, in The area of ​​civil aviation area is 150 ha. This is an important flight point of Central Vietnam and the whole country.</p>
+                    <p>is the largest airport in the Central - Central Highlands 
+                    region and  the third largest in Vietnam, located in Hai Chau district, 3 km from Da Nang city center, with a total airport area of ​​842 ha, in The area of ​​civil aviation area is 150 ha. This is an important flight point of Central Vietnam and the whole country.</p>
                 </div>
                 <!-- History-->
                 <h3>History</h3> <hr/>

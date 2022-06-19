@@ -20,7 +20,7 @@
                             <ul id="menu">
                                 <li><a href="index.html">Home</a></li>
                                 <li id="menu_active"><a href="about">About</a></li>
-                                <li><a href="index-2.html">News</a></li>
+                                <li><a href="news">News</a></li>
                                 <li><a href="login">Login</a></li>
                             </ul>
                         </nav>

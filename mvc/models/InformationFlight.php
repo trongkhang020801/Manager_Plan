@@ -11,13 +11,29 @@ class InformationFlight extends DB{
         return json_encode($infflight);
     } 
 
-    function getInformationFilghtSearch($idHang) {
-        if ($idHang==0)
-            $qr = 'select tc.* from maybay.hangmaybay as hb, maybay.maybay as mb, maybay.thongtinchuyenbay as tc
-            where hb.idHang = mb.idHang and mb.soHieu = tc.soHieu';
-        else
-            $qr = 'select tc.* from maybay.hangmaybay as hb, maybay.maybay as mb, maybay.thongtinchuyenbay as tc
-            where hb.idHang = mb.idHang and mb.soHieu = tc.soHieu and hb.idHang ='.$idHang;
+    function getInformationFilghtSearch($idHang,$Destination,$FLIGHT) {
+
+        // if ($idHang==0 and $Destination==-1 and  $FLIGHT==1)
+        //     $qr = 'select * from maybay.thongtinchuyenbay';
+        // else if($idHang!=0 and $Destination==-1 and  $FLIGHT==1)
+        //     $qr = 'select tc.* from maybay.hangmaybay as hb, maybay.maybay as mb, maybay.thongtinchuyenbay as tc
+        //         where hb.idHang = mb.idHang and mb.soHieu = tc.soHieu and hb.idHang ='.$idHang;
+        // else if ($Destination!='0' and $FLIGHT=='0' and $idHang=='0')
+        //     $qr = 'select * from maybay.thongtinchuyenbay where diemDen LIKE "%'.$Destination.'"';
+        // if ($FLIGHT!='0' and $idHang==0 and $Destination==0)
+        //     $qr = 'select * from maybay.thongtinchuyenbay where soHieu LIKE "%'.$FLIGHT.'"';
+        // if ($idHang!='0' and $Destination!='0' and  $FLIGHT!='0')
+        $qr = 'select tc.* from maybay.hangmaybay as hb, maybay.maybay as mb, maybay.thongtinchuyenbay as tc
+            where hb.idHang = mb.idHang and mb.soHieu = tc.soHieu and hb.idHang LIKE "%'.$idHang.'" and tc.diemDen LIKE "%'.$Destination.'" and tc.soHieu LIKE "%'.$FLIGHT.'"';
+        // if ($idHang!=0 and $Destination!='0' and  $FLIGHT==0)
+        //     $qr = 'select tc.* from maybay.hangmaybay as hb, maybay.maybay as mb, maybay.thongtinchuyenbay as tc
+        //                 where hb.idHang = mb.idHang and mb.soHieu = tc.soHieu and hb.idHang='.$idHang.' and tc.diemDen LIKE "'.$Destination.'"';
+        // if ($idHang!=0 and $FLIGHT!='0' and  $Destination==0)
+        //     $qr = 'select tc.* from maybay.hangmaybay as hb, maybay.maybay as mb, maybay.thongtinchuyenbay as tc
+        //                             where hb.idHang = mb.idHang and mb.soHieu = tc.soHieu and hb.idHang='.$idHang.' and tc.soHieu LIKE "'.$FLIGHT.'"';
+        // if ($Destination!='0' and $FLIGHT!='0' and  $idHang==0)
+        //     $qr = 'select tc.* from maybay.hangmaybay as hb, maybay.maybay as mb, maybay.thongtinchuyenbay as tc
+        //                                         where hb.idHang = mb.idHang and mb.soHieu = tc.soHieu and tc.diemDen LIKE "'.$Destination.'" and tc.soHieu LIKE "'.$FLIGHT.'"';
         $rows = mysqli_query($this->con, $qr);
         $infflight = array();
         while ( $row = mysqli_fetch_assoc($rows)) {

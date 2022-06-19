@@ -32,8 +32,8 @@
                 <tr>
                     <td><?php echo $item->soHieu?></td>
                     <td><?php echo $item->tenChuyenBay?></td>
-                    <td><?php echo $item->diemDen?></td>
                     <td><?php echo $item->diemDi?></td>
+                    <td><?php echo $item->diemDen?></td>
                     <td><?php echo $item->thoigiandi?></td>
                     <td><?php echo $item->thoigianden?></td>
                 </tr>
