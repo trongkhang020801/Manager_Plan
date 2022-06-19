@@ -52,7 +52,7 @@ $nameflight = json_decode($data['nameflight']);
                                 <?php } ?>
                                 </select>
                             </div>
-                            <button type="submit" class="btn btn-primary">Search</button>
+                            <button type="submit" class="btn-primary" style="height: 40px;border-radius: 10px;width: 100px;">Search</button>
                     </form>
 
                 </div>

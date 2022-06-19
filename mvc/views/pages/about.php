@@ -50,7 +50,7 @@
 <body id="page1">
     <div class="body1">
     <?php
-    include('./mvc/views/components/headerAbout.php');
+    include('./mvc/views/components/header.php');
     include('./mvc/views/components/BannerLeftSearch.php');
     include('./mvc/views/components/mainAbout.php');
     include('./mvc/views/components/footer.php');

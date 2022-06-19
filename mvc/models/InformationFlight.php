@@ -23,9 +23,10 @@ class InformationFlight extends DB{
     } 
 
 
-    function insertFlightInformation($soHieu, $tenChuyenBay, $diemDi, $diemDen, $thoigiandukien, $thoigiandi, $thoigianden, $idNV, $moTa){
+    function insertFlightInformation($name,$diemdi,$diemden, $timego,$timeend,$tiemfly,$content,$namefl){
+        $idNV = $_SESSION['login']['idNV'];
 
-        $sql="insert into thuonghieu values(null,'$soHieu', '$tenChuyenBay', '$diemDi, '$diemDen', '$thoigiandukien', '$thoigiandi', '$thoigianden', '$idNV', '$moTa')";
+        $sql="insert into thongtinchuyenbay values(null,'$namefl', '$name', '$diemdi', '$diemden', '$tiemfly', '$timego', '$timeend', '$idNV', '$content')";
         
         $rs=false;
         
@@ -41,25 +42,25 @@ class InformationFlight extends DB{
         
         
         
-        function updateFlightInformation($id, $soHieu, $tenChuyenBay, $diemDi, $diemDen, $thoigiandukien, $thoigiandi, $thoigianden, $idNV, $moTa){
+        function updateFlightInformation($id,$name,$diemdi,$diemden, $timego,$timeend,$tiemfly,$content,$namefl){
+            $idNV = $_SESSION['login']['idNV'];
+        $sql="update thongtinchuyenbay set soHieu = '$namefl',
         
-        $sql="update thongtinchuyenbay set soHieu = '$soHieu',
+        tenChuyenBay = '$name',
         
-        tenChuyenBay = '$tenChuyenBay',
+        diemDi = '$diemdi',
         
-        diemDi = '$diemDi'
+        diemDen = '$diemden',
         
-        diemDen = '$diemDen',
+        thoigiandukien = '$tiemfly',
         
-        thoigiandukien = '$thoigiandukien',
+        thoigiandi = '$timego',
         
-        thoigiandi = '$thoigiandi',
-        
-        thoigianden = '$thoigianden',
+        thoigianden = '$timeend',
         
         idNV = '$idNV',
         
-        moTa = '$moTa'
+        moTa = '$content'
         
         where idChuyenBay='$id'";
         

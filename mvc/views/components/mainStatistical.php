@@ -4,7 +4,7 @@
         <div class="stati">
             <p><b>Quản lý nhân viên</b></p>
             <button type="button" class="btn btn-success btn btn-primary" style="margin-bottom: 20px;" data-toggle="modal" data-target="#myModal">Thêm mới nhân viên</button>
-            <table class="table">
+            <table id="example" class="table table-striped" width="100%">
                 <thead>
                     <tr>
                     <th scope="col">Id</th>
@@ -13,7 +13,7 @@
                     <th scope="col">Ngày sinh</th>
                     <th scope="col">Số điện thoại</th>
                     <th scope="col">Tài khoảng</th>
-                    
+                    <th></th>
                     </tr>
                 </thead>
                 <?php  foreach ($statis as $key => $stati) { ?>
@@ -37,15 +37,7 @@
                 </tbody>
                 <?php } ?>
             </table>
-            <nav aria-label="Page navigation example" >
-                <ul class="pagination">
-                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                </ul>
-            </nav>
+            
         </div>
   <!-- The Modal -->
         <div class="modal" id="myModal">

@@ -21,6 +21,8 @@
     
     <script type="text/javascript" src="public/js/jquery-1.4.2.js"></script>
     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css">
     <!--[if lt IE 9]>
 	<script type="text/javascript" src="http://info.template-help.com/files/ie6_warning/ie6_script_other.js"></script>
 	<script type="text/javascript" src="js/html5.js"></script>
@@ -30,11 +32,18 @@
 <body id="page1">
 
     <?php
-    include('./mvc/views/components/header_profile.php');
+    include('./mvc/views/components/header.php');
     include('./mvc/views/components/mainStatistical.php');
     include('./mvc/views/components/footer.php');
     ?>
-
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $('#example').DataTable();
+});
+</script>
     <?php 
         if(isset($_SESSION['stati'])){
             $kq=$_SESSION['stati'];
