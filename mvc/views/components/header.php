@@ -4,27 +4,43 @@
             <header>
                 <div class="wrapper">
                     <h1>
-                        <a href="index.html" id="logo">Đà Nẵng</a>
+                        <a href="home" id="logo">Đà Nẵng</a>
                         <!-- <span id="slogan">International Travel</span> -->
                     </h1>
-                    <div class="right">
+                    <div class="right" style="display: flex; margin-top: 60px; float: left;">
                         <nav>
                             <ul id="top_nav">
                                 <li>
-                                    <a href="index.html"><img src="public/images/img1.gif" alt=""></a>
+                                    <a href="home"><img src="#" alt=""></a>
                                 </li>
                                 <li>
-                                    <a href="index-4.html"><img src="public/images/img2.gif" alt=""></a>
+                                    <a href="#"><img src="#" alt=""></a>
                                 </li>
 
                             </ul>
                         </nav>
                         <nav>
                             <ul id="menu">
-                                <li id="menu_active"><a href="index.html">Home</a></li>
-                                <li><a href="index-1.html">Introduce</a></li>
-                                <li><a href="index-2.html">News</a></li>
-                                <li><a href="login">Login</a></li>
+                                <li><a href="home">Home</a></li>
+                                <li><a href="about">About</a></li>
+                                <li><a href="news">News</a></li>
+                                <?php if (isset($_SESSION['login'])) { ?>
+                                    <li class="islogin"><a href="#">Hi <?php echo $_SESSION['login']['tenNV'] ?></a>
+                                        <ul class="sub-menu">
+                                            <li><a href="account">frofile</a></li>
+                                            <li><a href="flight">flight</a></li>
+                                            <?php if (isset($_SESSION['isAdmin'])) {
+                                            ?>
+                                                <li><a href="#">personnel</a></li>
+                                                <li><a href="statistical">statistical</a></li>
+                                            <?php } ?>
+                                            <li><a href="login/logOut">logout</a></li>
+                                        </ul>
+                                    </li>
+                                        <?php } else { ?>
+                                            <li><a href="login">Login</a></li>
+                                        <?php } ?>
+                            </ul>
                             </ul>
                         </nav>
                     </div>

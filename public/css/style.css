@@ -125,8 +125,7 @@ h2 {
     line-height: 38px;
     padding: 30px 0 16px 0;
     font-weight: 400;
-    letter-spacing: -1px;
-    margin-left: 10px;
+    letter-spacing: -1px
 }
 
 p {
@@ -182,12 +181,12 @@ header .right {
     float: left;
     padding-top: 8px;
     padding-left: 5px;
-    width: 570px
+    width: 570px;
 }
 
 #menu li {
     float: left;
-    padding-left: 1px
+    padding-left: 1px;
 }
 
 #menu li a {
@@ -214,8 +213,24 @@ header .right {
     margin: 0
 }
 
+#menu ul.sub-menu {
+    position: absolute;
+    background: #3c4046;
+    padding: 15px 0px;
+    width: 140px;
+    display: none;
+}
+
+#menu ul.sub-menu li {
+    margin: 0px 10px;
+}
+
+#menu li:hover ul.sub-menu {
+    display: block;
+}
+
 #banner {
-    /* background: url(../images/bg_img2.jpg) 0 0 no-repeat; */
+    background: url(../images/bg_img2.jpg) 0 0 no-repeat;
     height: 211px;
     padding: 30px 0 0 60px
 }
@@ -264,11 +279,6 @@ header .right {
     background: url(../images/button_top_active.jpg) 0 0 no-repeat
 }
 
-.table {
-    min-width: 620px;
-    max-width: 620px;
-}
-
 
 /* content */
 
@@ -277,22 +287,16 @@ header .right {
     overflow: hidden
 }
 
-.form-contro {
-    width: 120px;
-    height: 60px;
-}
-
 .pad_1 {
-    padding: 0 15px 20px 15px
+    padding: 0 50px 35px 60px
 }
 
 .pad_left1 {
-    padding-left: 35px
+    padding-left: 50px
 }
 
 .pad_bot1 {
-    padding-left: 10px;
-    padding-bottom: 10px
+    padding-bottom: 20px
 }
 
 .pad_bot2 {
@@ -304,7 +308,7 @@ header .right {
 }
 
 .marg_right1 {
-    margin-right: 20px
+    margin-right: 25px
 }
 
 .button1,
@@ -448,7 +452,7 @@ footer a {
 }
 
 #form_1 .radio {
-    width: 110px;
+    width: 92px;
     float: left
 }
 
@@ -494,4 +498,24 @@ footer a {
     color: #9d9fa2;
     font: 14px Arial, Helvetica, sans-serif;
     padding: 2px 15px
+}
+
+.stati {
+    margin: 30px 0px;
+    float: left;
+}
+
+.stati p {
+    color: #000;
+    font-size: 30px;
+    width: 1000px;
+    margin: 0%;
+}
+
+.stati tbody:last-child {
+    border-bottom: 2px solid #dee2e6;
+}
+
+.img_about {
+    height: 200px;
 }

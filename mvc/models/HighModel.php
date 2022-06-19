@@ -32,7 +32,24 @@ class HighModel extends DB{
         }
         return json_encode($nameAirline);
     } 
-    
+    function getInformationAirline_to() {
+        $qr = "SELECT DISTINCT diemDen FROM maybay.thongtinchuyenbay";
+        $rows = mysqli_query($this->con, $qr);
+        $nameAirline = array();
+        while ( $row = mysqli_fetch_assoc($rows)) {
+            $nameAirline[] = $row;
+        }
+        return json_encode($nameAirline);
+    }
+    function getInformationAirline_fl() {
+        $qr = "SELECT DISTINCT soHieu FROM maybay.thongtinchuyenbay";
+        $rows = mysqli_query($this->con, $qr);
+        $nameAirline = array();
+        while ( $row = mysqli_fetch_assoc($rows)) {
+            $nameAirline[] = $row;
+        }
+        return json_encode($nameAirline);
+    }
 }
 
 ?>

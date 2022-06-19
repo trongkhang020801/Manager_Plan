@@ -1,69 +1,43 @@
-<!doctype html>
-<html class="no-js" lang="zxx">
- 
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
+    <title></title>
     <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>TShop</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Favicons -->
-    <base href="http://localhost/ShopDH/">
-
-    <!-- ************************* CSS Files ************************* -->
-
-    <!-- Vendor CSS -->
-    <link rel="stylesheet" href="public/css/vendor.css">
-
-    <!-- style css -->
-    <link rel="stylesheet" href="public/css/main.css">
-</head>
-<body>
-  <div class="wrapper">
-    <!-- header -->
+    <base href="http://localhost:81/Manager_Plan/account">
+    <link rel="stylesheet" href="public/css/reset.css" type="text/css" media="all">
+    <link rel="stylesheet" href="public/css/layout.css" type="text/css" media="all">
+    <link rel="stylesheet" href="public/css/style.css" type="text/css" media="all">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" type="text/css" >
+    <script type="text/javascript" src="public/js/jquery-1.4.2.js"></script>
+    <script type="text/javascript" src="public/js/cufon-yui.js"></script>
+    <script type="text/javascript" src="public/js/cufon-replace.js"></script>
+    <script type="text/javascript" src="public/js/Myriad_Pro_italic_600.font.js"></script>
+    <script type="text/javascript" src="public/js/Myriad_Pro_italic_400.font.js"></script>
     
+    <script type="text/javascript" src="public/js/jquery-1.4.2.js"></script>
+    
+    <!--[if lt IE 9]>
+	<script type="text/javascript" src="http://info.template-help.com/files/ie6_warning/ie6_script_other.js"></script>
+	<script type="text/javascript" src="js/html5.js"></script>
+<![endif]-->
+</head>
+
+<body id="page1">
+
     <?php
-          include('./mvc/views/components/header.php');
+    include('./mvc/views/components/header.php');
+    include('./mvc/views/components/account.php');
+    include('./mvc/views/components/footer.php');
     ?>
-    <!-- end header  -->
 
-    <!-- main -->
-    <main>
-    <?php
-          include('./mvc/views/components/myAccount.php');
-    ?>
-    <main>
-    <!-- end footer  -->
-
-    <!-- footer -->
-    <footer class="footer bg-color" data-bg-color="#000">
-        <?php include('./mvc/views/components/footer.php');?>
-    </footer>
-    <!-- end footer  -->
-  </div>
-   <!-- ************************* JS Files ************************* -->
-
-    <!-- jQuery JS -->
-    <script src="public/js/vendor.js"></script>
-
-    <!-- Main JS -->
-    <script src="public/js/main.js"></script>
     <?php 
         if(isset($_SESSION['profile'])){
             $kq=$_SESSION['profile'];
             echo "<script>alert('$kq')</script>";
             unset($_SESSION['profile']); 
         }
-        if(isset($_SESSION['pass'])){
-          $kq=$_SESSION['pass'];
-          echo "<script>alert('$kq')</script>";
-          unset($_SESSION['pass']); 
-        }
-        if(isset($_SESSION['delorder'])){
-          $kq=$_SESSION['delorder'];
-          echo "<script>alert('$kq')</script>";
-          unset($_SESSION['delorder']); 
-        }
     ?>
 </body>
+
 </html>

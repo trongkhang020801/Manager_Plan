@@ -1,22 +1,29 @@
 .col1,
 .col2,
 .col3,
+.col4,
 .cols {
     float: left
 }
 
 .col1 {
-    width: 280px;
+    width: 30%;
+    background: #f4f4f4;
+    height: 100%
+}
+
+.col4 {
+    width: 1000px;
     background: #f4f4f4;
     height: 100%
 }
 
 .col2 {
-    width: 620px;
+    width: 70%;
 }
 
 .cols {
-    width: 280px;
+    width: 30%;
 }
 
 
