@@ -12,28 +12,8 @@ class InformationFlight extends DB{
     } 
 
     function getInformationFilghtSearch($idHang,$Destination,$FLIGHT) {
-
-        // if ($idHang==0 and $Destination==-1 and  $FLIGHT==1)
-        //     $qr = 'select * from maybay.thongtinchuyenbay';
-        // else if($idHang!=0 and $Destination==-1 and  $FLIGHT==1)
-        //     $qr = 'select tc.* from maybay.hangmaybay as hb, maybay.maybay as mb, maybay.thongtinchuyenbay as tc
-        //         where hb.idHang = mb.idHang and mb.soHieu = tc.soHieu and hb.idHang ='.$idHang;
-        // else if ($Destination!='0' and $FLIGHT=='0' and $idHang=='0')
-        //     $qr = 'select * from maybay.thongtinchuyenbay where diemDen LIKE "%'.$Destination.'"';
-        // if ($FLIGHT!='0' and $idHang==0 and $Destination==0)
-        //     $qr = 'select * from maybay.thongtinchuyenbay where soHieu LIKE "%'.$FLIGHT.'"';
-        // if ($idHang!='0' and $Destination!='0' and  $FLIGHT!='0')
         $qr = 'select tc.* from maybay.hangmaybay as hb, maybay.maybay as mb, maybay.thongtinchuyenbay as tc
             where hb.idHang = mb.idHang and mb.soHieu = tc.soHieu and hb.idHang LIKE "%'.$idHang.'" and tc.diemDen LIKE "%'.$Destination.'" and tc.soHieu LIKE "%'.$FLIGHT.'"';
-        // if ($idHang!=0 and $Destination!='0' and  $FLIGHT==0)
-        //     $qr = 'select tc.* from maybay.hangmaybay as hb, maybay.maybay as mb, maybay.thongtinchuyenbay as tc
-        //                 where hb.idHang = mb.idHang and mb.soHieu = tc.soHieu and hb.idHang='.$idHang.' and tc.diemDen LIKE "'.$Destination.'"';
-        // if ($idHang!=0 and $FLIGHT!='0' and  $Destination==0)
-        //     $qr = 'select tc.* from maybay.hangmaybay as hb, maybay.maybay as mb, maybay.thongtinchuyenbay as tc
-        //                             where hb.idHang = mb.idHang and mb.soHieu = tc.soHieu and hb.idHang='.$idHang.' and tc.soHieu LIKE "'.$FLIGHT.'"';
-        // if ($Destination!='0' and $FLIGHT!='0' and  $idHang==0)
-        //     $qr = 'select tc.* from maybay.hangmaybay as hb, maybay.maybay as mb, maybay.thongtinchuyenbay as tc
-        //                                         where hb.idHang = mb.idHang and mb.soHieu = tc.soHieu and tc.diemDen LIKE "'.$Destination.'" and tc.soHieu LIKE "'.$FLIGHT.'"';
         $rows = mysqli_query($this->con, $qr);
         $infflight = array();
         while ( $row = mysqli_fetch_assoc($rows)) {
@@ -41,6 +21,139 @@ class InformationFlight extends DB{
         }
         return json_encode($infflight);
     } 
+
+
+    function insertFlightInformation($soHieu, $tenChuyenBay, $diemDi, $diemDen, $thoigiandukien, $thoigiandi, $thoigianden, $idNV, $moTa){
+
+        $sql="insert into thuonghieu values(null,'$soHieu', '$tenChuyenBay', '$diemDi, '$diemDen', '$thoigiandukien', '$thoigiandi', '$thoigianden', '$idNV', '$moTa')";
+        
+        $rs=false;
+        
+        if (mysqli_query($this->con, $sql)) {
+        
+        $rs=true;
+        
+        }
+        
+        return $rs;
+        
+        }
+        
+        
+        
+        function updateFlightInformation($id, $soHieu, $tenChuyenBay, $diemDi, $diemDen, $thoigiandukien, $thoigiandi, $thoigianden, $idNV, $moTa){
+        
+        $sql="update thongtinchuyenbay set soHieu = '$soHieu',
+        
+        tenChuyenBay = '$tenChuyenBay',
+        
+        diemDi = '$diemDi'
+        
+        diemDen = '$diemDen',
+        
+        thoigiandukien = '$thoigiandukien',
+        
+        thoigiandi = '$thoigiandi',
+        
+        thoigianden = '$thoigianden',
+        
+        idNV = '$idNV',
+        
+        moTa = '$moTa'
+        
+        where idChuyenBay='$id'";
+        
+        $rs=false;
+        
+        if (mysqli_query($this->con, $sql)) {
+        
+        $rs=true;
+        
+        }
+        
+        return $rs;
+        
+        }
+        
+        
+        
+        function deleteFlightInformation($id){
+        
+        $sql = "delete from thongtinchuyenbay where idChuyenBay = '$id'";
+        
+        $rs = false;
+        
+        if (mysqli_query($this->con, $sql)) {
+        
+        $rs = true;
+        
+        }
+        
+        return $rs;
+        
+        }
+
+        function insertNews($idNV, $tieuDe, $noiDung, $ngayDang, $linkIMG){
+
+            $sql="insert into baidang values(null, '$idNV', '$tieuDe', '$noiDung', '$ngayDang','$LinkIMG')";
+            
+            $rs=false;
+            
+            if (mysqli_query($this->con, $sql)) {
+            
+            $rs=true;
+            
+            }
+            
+            return $rs;
+            
+            }
+            
+            
+            
+            function updateNews($id, $idNV, $tieuDe, $noiDung, $ngayDang, $linkIMG){
+            
+            $sql="update baidang set idNV = '$idNV',
+            
+            tieuDe = '$tieuDe'
+            
+            noiDung = '$noiDung',
+            
+            ngayDang = '$ngayDang',
+
+            linkIMG = '$linkIMG'
+
+            where idBD = '$id'";
+            
+            $rs=false;
+            
+            if (mysqli_query($this->con, $sql)) {
+            
+            $rs=true;
+            
+            }
+            
+            return $rs;
+            
+            }
+            
+            
+            
+            function deleteNews($id){
+            
+            $sql = "delete from baidang where idBD = '$id'";
+            
+            $rs = false;
+            
+            if (mysqli_query($this->con, $sql)) {
+            
+            $rs = true;
+            
+            }
+            
+            return $rs;
+            
+            }
     // function getMenList() {
     //     $qr =  "SELECT * FROM sanpham as s,danhmuc as d, thuonghieu as t
     //             where s.madm=d.madm and d.tendm='Nam' and s.math=t.math";
