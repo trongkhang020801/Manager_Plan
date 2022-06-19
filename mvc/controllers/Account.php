@@ -26,16 +26,16 @@
             $data = json_decode($this->AccountModel->changefl($id,$name,$old,$cccd,$sdt,$address,$user,$pass,$gender));
             if($data==true){
                 $_SESSION['profile']='Thay đổi thành công';
-                header('Location: http://localhost/Manager_Plan/account');
+                header('Location: http://localhost:81/Manager_Plan/account');
             }
             else{
                 $_SESSION['profile']='Thay không thành công';
-                header('Location: http://localhost/Manager_Plan/account');
+                header('Location: http://localhost:81/Manager_Plan/account');
             }
         }
         else{
             $_SESSION['profile']='Bạn chưa nhập đủ thông tin';
-            header('Location: http://localhost/Manager_Plan/account');
+            header('Location: http://localhost:81/Manager_Plan/account');
         }
     }
  }

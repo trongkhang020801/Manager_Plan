@@ -19,15 +19,15 @@ class login extends Controller {
             $Pass=$_POST['Pass'];
 
             if($this->AccountModel->checkpass($idUser,$Pass)){
-                    header('Location: http://localhost/Manager_Plan/');
+                    header('Location: http://localhost:81/Manager_Plan/');
             }
             else{
                 $_SESSION['mess']="Tài khảng hoặc mật khẩu không đúng"; 
-                header('Location: http://localhost/Manager_Plan/login');
+                header('Location: http://localhost:81/Manager_Plan/login');
             }
         } else{
             $_SESSION['mess']="Bạn chưa nhập thông tin"; 
-             header('Location: http://localhost/Manager_Plan/login');
+             header('Location: http://localhost:81/Manager_Plan/login');
         }        
             
     }
@@ -40,7 +40,7 @@ class login extends Controller {
         if(isset($_SESSION['isAdmin'])){
             unset($_SESSION['isAdmin']);
         }
-        header('location:http://localhost/Manager_Plan/login');
+        header('location:http://localhost:81/Manager_Plan/login');
     }
 }
 ?>

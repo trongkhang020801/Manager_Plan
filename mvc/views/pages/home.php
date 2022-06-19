@@ -5,7 +5,7 @@
     <title></title>
     <meta charset="utf-8">
   ``<meta http-equiv="x-ua-compatible" content="ie=edge">
-    <base href="http://localhost/Manager_Plan/">
+    <base href="http://localhost:81/Manager_Plan/">
     <link rel="stylesheet" href="public/css/reset.css" type="text/css" media="all">
     <link rel="stylesheet" href="public/css/layout.css" type="text/css" media="all">
     <link rel="stylesheet" href="public/css/style.css" type="text/css" media="all">
