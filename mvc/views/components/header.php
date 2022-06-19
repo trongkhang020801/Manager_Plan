@@ -24,7 +24,23 @@
                                 <li id="menu_active"><a href="index.html">Home</a></li>
                                 <li><a href="about">About</a></li>
                                 <li><a href="news">News</a></li>
-                                <li><a href="login">Login</a></li>
+                                <?php if (isset($_SESSION['login'])) { ?>
+                                    <li class="islogin"><a href="#">Hi <?php echo $_SESSION['login']['tenNV'] ?></a>
+                                        <ul class="sub-menu">
+                                            <li><a href="account">frofile</a></li>
+                                            <li><a href="#">flight</a></li>
+                                            <?php if (isset($_SESSION['isAdmin'])) {
+                                            ?>
+                                                <li><a href="#">personnel</a></li>
+                                                <li><a href="statistical">statistical</a></li>
+                                            <?php } ?>
+                                            <li><a href="login/logOut">logout</a></li>
+                                        </ul>
+                                    </li>
+                                        <?php } else { ?>
+                                            <li><a href="login">Login</a></li>
+                                        <?php } ?>
+                            </ul>
                             </ul>
                         </nav>
                     </div>

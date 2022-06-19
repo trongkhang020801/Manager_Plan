@@ -526,3 +526,10 @@ p {
 button {
     max-width: 100px;
 }
+
+.islogin {
+    display: block;
+    width: 100px;
+    height: 100%;
+    z-index: 1;
+}

@@ -1,38 +1,51 @@
 <div class="main">
-        <!-- content -->
-        <section id="content">
-        <div id="acc">
-        <form action="account/changeProfile" method="POST">
-            <div class="mb-3" style="margin-top: 10px;">
-                <label for="exampleInputEmail1" class="form-label">Họ Tên</label>
-                <input type="text" class="form-control" name="name" id="exampleInputEmail1" name aria-describedby="emailHelp"value="<?php echo $_SESSION['login']['tenNV'] ?>">
+    <section id="content">
+        <div class="container rounded bg-white mt-5 mb-5">
+            <div class="row">
+                <div style="max-width: 300px;">
+                    <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" src="https://meovatcuocsong.vn/wp-content/uploads/2019/03/avatar-facebook-dep-29.jpg">
+                    <button style="margin-top: 20px;"><a href="#" >Uploads File</a></button></div>
+                </div>
+                <div style="max-width: 700px;">
+                <form action="account/changeProfile" method="POST">
+                    <div class="p-3 py-5">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h4 class="text-right">Trang cá nhân</h4>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-md-12"><label class="labels">Tên</label><input type="text" class="form-control"  value="<?php echo $_SESSION['login']['tenNV']?>" name="name"></div>
+                        </div>
+                        <div class="row mt-3">
+                                <div class="col-md-6">
+                                    <label class="labels">Giới tính</label>
+                                    <div>
+                                        <input class="btn-radio" <?php if($_SESSION['login']['gioiTinh']==1) echo "checked";?> type="radio" name="gender" value="1">
+                                        <label for="male"> Nam </label>
+                                        <input class="btn-radio"  type="radio" <?php if($_SESSION['login']['gioiTinh']==0) echo "checked";?>   name="gender" value="0">
+                                        <label for="female"> Nữ</label>
+                                        <input class="btn-radio" type="radio" <?php if($_SESSION['login']['gioiTinh']>1) echo "checked";?>  name="gender" value="2">
+                                        <label for="other"> Khác </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6"><label class="labels">Ngày sinh</label><input type="date" 
+                                 class="form-control" value="<?php echo $_SESSION['login']['ngaySinh']?>" name="old"></div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-12"><label class="labels">Địa chỉ</label><input type="text" class="form-control"  value="<?php echo $_SESSION['login']['diaChi']?>" name="address"></div>
+                            <div class="col-md-12"><label class="labels">Số điện thoại</label><input type="text" class="form-control"  value="<?php echo $_SESSION['login']['SDT']?>" name="sdt"></div>
+                            <div class="col-md-12"><label class="labels">Căng cước công dân</label><input type="text" class="form-control"  value="<?php echo $_SESSION['login']['CCCD']?>" name="cccd"></div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-6"><label class="labels">Tài khoảng</label><input type="text" class="form-control"  value="<?php echo $_SESSION['login']['taiKhoang']?>" name="user"></div>
+                            <div class="col-md-6"><label class="labels">Mật khẩu</label><input type="password" class="form-control" value="<?php echo $_SESSION['login']['matKhau']?>" name="pass"></div>
+                        </div>
+                        <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="submit">Lưu thay đổi</button></div>
+                    </div>
+                </form>
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Ngày sinh</label>
-                <input type="text" class="form-control" name="old" id="exampleInputPassword1" value="<?php echo $_SESSION['login']['ngaySinh'] ?>">
-            </div>
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Địa chỉ</label>
-                <input type="text" class="form-control" name="address" id="exampleInputEmail1" aria-describedby="emailHelp"value="<?php echo $_SESSION['login']['diaChi'] ?>">
-            </div>
-            <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">SDT</label>
-                <input type="text" class="form-control" name="sdt" id="exampleInputPassword1"value="<?php echo $_SESSION['login']['SDT'] ?>">
-            </div>
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Căn cước công dân</label>
-                <input type="text" class="form-control" name="cccd" id="exampleInputEmail1" aria-describedby="emailHelp"value="<?php echo $_SESSION['login']['CCCD'] ?>">
-            </div>
-            <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Tài khoảng</label>
-                <input type="text" class="form-control" name="user" id="exampleInputPassword1"value="<?php echo $_SESSION['login']['taiKhoang'] ?>">
-            </div>
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Mật khẩu</label>
-                <input type="password" class="form-control" name="pass" id="exampleInputEmail1" aria-describedby="emailHelp"value="<?php echo $_SESSION['login']['matKhau'] ?>">
-            </div>
-            <button type="submit" class="btn btn-primary" style="margin-bottom: 10px;">Sửa</button>
-            <button class="btn btn-primary" style="margin-bottom: 10px;"><a href="login/logOut" style="text-decoration: none; color:white;">Đăng xuất</a></button>
-        </form>
         </div>
+</div>
+</div>
+</section>
 </div>
