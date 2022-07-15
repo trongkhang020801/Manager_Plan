@@ -56,7 +56,7 @@ class AccountModel extends DB{
     }
     function insertStati($name,$gender,$phone, $cccd,$address,$old)
         {
-            $qr = "INSERT into nhanvien VALUE(null,'2', '$name', '$gender','$old',
+            $qr = "INSERT into nhanvien VALUE(null,'0', '$name', '$gender','$old',
              '$address','$phone','$cccd', '$name','123456')";
             $rs = false;
             if (mysqli_query($this->con, $qr)){

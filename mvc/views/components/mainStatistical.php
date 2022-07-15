@@ -74,7 +74,7 @@
                             <div class="row mt-3">
                                 <div class="col-md-12"><label class="labels">Địa chỉ</label><input type="text" class="form-control" name="address"></div>
                                 <div class="col-md-12"><label class="labels">Số điện thoại</label><input type="text" class="form-control" name="sdt"></div>
-                                <div class="col-md-12"><label class="labels">Căng cước công dân</label><input type="text" class="form-control" name="cccd"></div>
+                                <div class="col-md-12"><label class="labels">Căn cước công dân</label><input type="text" class="form-control" name="cccd"></div>
                             </div>
                         </div>
                     </div>

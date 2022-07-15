@@ -38,7 +38,7 @@
                 if($data){
                     $_SESSION['stati']='Thêm nhân viên thành công';
                 } else{
-                    $_SESSION['stati']='Thêm nhân viên thất bại';
+                    $_SESSION['stati']='Thêm nhân viên thất bại'.$name.$gender.$phone.$cccd.$address.$old;
                 }
             } else{
                 $_SESSION['stati']='Bạn chưa nhâp đủ thông tin';

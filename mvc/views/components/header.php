@@ -27,12 +27,12 @@
                                 <?php if (isset($_SESSION['login'])) { ?>
                                     <li class="islogin"><a href="#">Hi <?php echo $_SESSION['login']['tenNV'] ?></a>
                                         <ul class="sub-menu">
-                                            <li><a href="account">frofile</a></li>
+                                            <li><a href="account">Profile</a></li>
                                             <li><a href="flight">flight</a></li>
                                             <?php if (isset($_SESSION['isAdmin'])) {
                                             ?>
-                                                <li><a href="#">personnel</a></li>
-                                                <li><a href="statistical">statistical</a></li>
+                                                <li><a href="thongke">statistical</a></li>
+                                                <li><a href="statistical">Personal</a></li>
                                             <?php } ?>
                                             <li><a href="login/logOut">logout</a></li>
                                         </ul>
